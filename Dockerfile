@@ -2,6 +2,8 @@ FROM ubuntu:14.04
 MAINTAINER Daniel Craigmile
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt-get update -y
+
 # set up to recognize repo
 RUN apt-get install -y wget
 RUN wget -O - http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
